@@ -1,7 +1,8 @@
-/* game of life v1.0.2 by Santiago Bernal - @santiaguf
+/* game of life v1.0.3 by Santiago Bernal - @santiaguf
 v1.0.0 - Functional game
 v1.0.1 - countNeighbors and ChangeCell functions
-v1.0.2 - printGame function */
+v1.0.2 - printGame function
+v1.0.3 - allow GUI in browser */
 
 
 function gameOfLife(initialGame, moves) {
@@ -48,18 +49,23 @@ function changeCell(neighbors, initialGame, resultGame,i,j){
     }
 }
 
+function printData(data){
+  console.log(data);
+  document.writeln(data+'<br>');
+}
+
 function printGame(game,title){
   //show results
-  console.log(title);
+  printData(title);
   let builder;
   for(let m=0;m<3;m++){
     builder = "";
     for(let n=0;n<3;n++){
       builder = builder + "[" +game[m][n]+"]";
     }
-    console.log(builder);
+    printData(builder);
   }
-  console.log("");
+  printData("");
 }
 
 //let the game begin
