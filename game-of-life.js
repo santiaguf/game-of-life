@@ -4,7 +4,7 @@ v1.0.1 - countNeighbors and ChangeCell functions
 v1.0.2 - printGame function */
 
 
-function gameOfLife(initialGame) {
+function gameOfLife(initialGame, moves) {
   let resultGame =  [[,,],[,,],[,,]];
 
   for(let i=0;i<3;i++){
@@ -14,8 +14,10 @@ function gameOfLife(initialGame) {
     }
   }
 
-  printGame(initialGame, "initial game");
-  printGame(resultGame, "next game");
+  printGame(initialGame, "game");
+  if(moves > 1){
+    gameOfLife(resultGame, moves-1);
+  }
 }
 
 function countNeighbors(i,j,initialGame){
@@ -62,4 +64,5 @@ function printGame(game,title){
 
 //let the game begin
 let game = [[1,0,0],[0,1,1],[1,1,0]];
-gameOfLife(game);
+let moves = 6;
+gameOfLife(game,moves);
