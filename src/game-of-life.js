@@ -51,7 +51,9 @@ function changeCell(neighbors, initialGame, resultGame,i,j){
 
 function printData(data){
   console.log(data);
-  document.writeln(data+'<br>');
+  let board = document.getElementById("board");
+  board.appendChild(document.createTextNode(data));
+  board.appendChild(document.createElement('br'));
 }
 
 function printGame(game,title){
@@ -71,4 +73,4 @@ function printGame(game,title){
 //let the game begin
 let game = [[1,0,0],[0,1,1],[1,1,0]];
 let moves = 6;
-gameOfLife(game,moves);
+//gameOfLife(game,moves);
