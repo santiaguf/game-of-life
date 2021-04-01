@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Life</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
+
 <body>
     <header>
-        <h1>Let's play the famous <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Game of Life</a></h1>
+        <h1>Let's play the famous <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Game
+                of Life</a></h1>
     </header>
     <section>
         <p>set moves you want for the game</p>
         <div class="input-group mb-3" id="search-form">
             <input type="number" id="moves" name="moves" class="input form-control col-md-4" placeholder="1" value="1">
-            <button type="button" id="play" name="play" class="btn btn-outline-secondary" onclick="gameOfLife([[1,0,0],[0,1,1],[1,1,0]],document.getElementById('moves').value)">Play</button>
+            <button type="button" id="play" name="play" class="btn btn-outline-secondary"
+                onclick="gameOfLife([[1,0,0],[0,1,1],[1,1,0]],document.getElementById('moves').value)">Play</button>
         </div>
         <div id="board">
         </div>
     </section>
     <script src="src/game-of-life.js"></script>
 </body>
+
 </html>
